@@ -23,7 +23,7 @@ Trabajo formalmente desde hace ya 11 años donde al menos 6 de ellos han sido pr
 🐦 Encuentrame en twitter como [@matiasfha](https://twitter.com/matiasfha)
 
 ## ¿Qué esperar de este workshop?
-Este workshop está orientado a quienes quieren comenzar a trabajar con React o incluso para quienes llevan un tiempo trabajando ya que profundizaremos en algunos de los conceptos y modelos mentales base para entendeer cómo y por qué de algunas técnicas o métodos de uso de React.
+Este workshop está orientado a quienes quieren comenzar a trabajar con React o incluso para quienes llevan un tiempo trabajando ya que profundizaremos en algunos de los conceptos y modelos mentales base para entender cómo y por qué de algunas técnicas o métodos de uso de React.
 
 Comenzaremos desde los fundamentos revisando que es un componente y como **Pensar en React** para finalizar implementando una interfáz estática.
 
