@@ -6,46 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso: React desde cero - Lección 03</title>
     <!-- 💡 Estos son los archivos de React -->
-
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
     <!--💡  Este div actuará como "base" para renderizar nuestros elementos -->
     <div id="root1"></div>
-    
     <!--💡  Este div actuará como "base" para renderizar nuestros elementos con React -->
     <div id="root2"></div>
     <!-- 💡 Aquí será donde escribamos nuestros scripts -->
     
     <script type="text/javascript">
     /* 🏋️‍♂️ 1. Crea elementos de interfaz utilizando la api DOM de Javascript
-
-    - [ ] Crea un elemento H1.
-    - [ ] Crea una lista de al menos dos items
+    - [X] Crea un elemento H1.
+    - [X] Crea una lista de al menos dos items
     */
-    
-    const root = document.getElementById('root1')
 
-    // 💡
-    // root.appendChild()
+    const root = document.getElementById('root1');
+    const h1 = document.createElement('h1');
+    h1.innerHTML = 'Este es el título';
 
+    // 💡 root.appendChild()
+    root.appendChild(h1)
+
+    const myUlList = document.createElement('ul');
+    const firstLiElement = document.createElement('li');
+    const secondLiElement = document.createElement('li');
+
+    firstLiElement.innerHTML = 'Primer elemento';
+    secondLiElement.innerHTML = 'Segundo elemento';
+
+    myUlList.append(firstLiElement, secondLiElement)
+    root.appendChild(myUlList)
 
     /* 🏋️‍♂️ 2. Crea un elemento h1 utilizando las API de React. 
     En React las atributos de los elementos HTML son props
     el atributo textNode o el contenido que se renderizará dentro
     del elemento creado es agregado utilizando la prop "children"
     */
-    
+
+    //const h1WithReact = React.createElement('h1', {children: 'Hola mundo, este otro título se creó con React'});
+    // ReactDOM.render(h1WithReact, root2)
+
     /* 🏋️‍♂️ 3. Crea un elementos anidados utilizando las API de React */
     // <h1>Hola <strong>Mundo!</strong></h1>
-    
+
+    const strongElement = React.createElement('strong', {
+        children: 'mundo'
+    });
+    const h1WithReactAgain = React.createElement('h1', {children: ['Hola ', strongElement,', este otro título se creó con React']});
+
+    // ReactDOM.render(h1WithReactAgain, root2)
+
     /* 🍬  Utilizando `React.createElement` crea una lista de 3 elementos utilizando `ul` y `li`. */
 
+    const li1 = React.createElement('li', {children: 'Primer elemento creado con React'});
+    const li2 = React.createElement('li', null, 'Segundo elemento creado con React');
+    const ulWithReact = React.createElement('ul', null, li1, li2)
 
     // 💡Para renderizar tus componentes en la pagina debes usar ReactDOM
     // const root2 = document.getElementById('root2')
-    // ReactDOM.render(h1, root2)
+    
+    ReactDOM.render([h1WithReactAgain, ulWithReact], root2)
+
 
 
     </script>
