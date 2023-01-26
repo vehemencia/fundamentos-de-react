@@ -1,6 +1,6 @@
 # Lección 04 - Conociendo JSX
 
-JSX es una abstracción sobre la API `Reac.createElement` que permite expresar de forma aún más declarativa la definición de la UI que quieres renderizar.
+JSX es una abstracción sobre la API `React.createElement` que permite expresar de forma aún más declarativa la definición de la UI que quieres renderizar.
 
 JSX es una forma más intuitiva de crear componentes, al menos más intuitiva o declarativa que la API `React.createElement`. Es muy similar a HTML.
 

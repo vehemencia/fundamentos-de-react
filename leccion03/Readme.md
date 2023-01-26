@@ -64,7 +64,7 @@ La estructura a crear es:
 <h1>Hola <strong>Mundo!</strong></h1>
 ```
 
-Tip: Recuerda que `React.createElement` acepta como segundo parámetros un arreglos de `props` donde una de ellas puede ser `children`
+Tip: Recuerda que `React.createElement` acepta como segundo parámetro un arreglo de `props` donde una de ellas puede ser `children`
 
 ## 🍬 Crédito Extra
 
